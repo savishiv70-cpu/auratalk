@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8b5cf6">
+  <title>AuraTalk — Connect with everyone</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; min-height: 100vh;
+      font-family: Arial, sans-serif;
+      color: #28213c;
+      background: linear-gradient(135deg, #f7f2ff, #e9e2ff);
+    }
+    header {
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 20px 7%;
+    }
+    .logo { font-size: 25px; font-weight: 800; color: #7c3aed; }
+    .tag { color: #6d5b88; font-size: 13px; }
+    main {
+      max-width: 850px; margin: 50px auto; padding: 24px;
+      text-align: center;
+    }
+    .pill {
+      display: inline-block; padding: 8px 14px;
+      border-radius: 30px; background: #e4d7ff;
+      color: #6d28d9; font-size: 13px;
+    }
+    h1 { font-size: clamp(40px, 8vw, 68px); margin: 24px 0 15px; }
+    h1 span { color: #8b5cf6; }
+    .intro { color: #716783; font-size: 17px; line-height: 1.7; }
+    .panel {
+      margin: 35px auto; max-width: 530px; padding: 24px;
+      background: #ffffffd9; border: 1px solid #e4d8ff;
+      border-radius: 22px; box-shadow: 0 12px 40px #6d28d91a;
+    }
+    .status {
+      background: #fff7df; color: #805b12;
+      border-radius: 12px; padding: 13px;
+      font-size: 14px; line-height: 1.6;
+    }
+    button {
+      border: 0; border-radius: 12px; padding: 13px 20px;
+      background: #8b5cf6; color: white; font-weight: bold;
+      cursor: pointer; margin-top: 15px;
+    }
+    button:hover { background: #7c3aed; }
+    footer { text-align: center; padding: 25px; color: #8a7e9d; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">✦ AuraTalk</div>
+    <div class="tag">A little closer, everywhere.</div>
+  </header>
+
+  <main>
+    <div class="pill">✦ YOUR SPACE TO CONNECT</div>
+    <h1>Conversations<br>with <span>good vibes.</span></h1>
+    <p class="intro">
+      Meet people, share ideas, and keep every conversation flowing.
+      Welcome to your new community.
+    </p>
+
+    <section class="panel">
+      <h2>Welcome to AuraTalk 💜</h2>
+      <p>Our community starts here.</p>
+      <div class="status" id="status">
+        This is the first version of AuraTalk. Online accounts and
+        shared messaging have not been connected yet.
+      </div>
+      <button onclick="showStatus()">Check app status</button>
+    </section>
+  </main>
+
+  <footer>Made for conversations that matter. © AuraTalk</footer>
+
+  <script>
+    function showStatus() {
+      document.getElementById("status").textContent =
+        "The AuraTalk homepage is working! Shared chat requires a database connection.";
+    }
+  </script>
+</body>
+</html>
